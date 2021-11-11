@@ -9,7 +9,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 
 @Aspect
-@Order(2)
+@Order(1)
 public class LoggingAspect {
 	private final static Logger LOG = Logger.getLogger(LoggingAspect.class.getName());
 

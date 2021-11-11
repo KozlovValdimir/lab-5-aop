@@ -5,10 +5,12 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 
 import java.util.logging.Logger;
 
 @Aspect
+@Order(2)
 public class ValidationLoggingAspect {
     private final static Logger LOG = Logger.getLogger(ValidationLoggingAspect.class.getName());
 

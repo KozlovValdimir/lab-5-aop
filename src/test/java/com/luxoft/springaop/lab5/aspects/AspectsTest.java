@@ -33,17 +33,9 @@ public class AspectsTest {
 		System.out.println(person);
 	}
 
-	@Test
+	@Test(expected= ValidationException.class)
 	public void testValidationException() {
-		try {
-			Person person = (Person) context.getBean("person");
-			person.setAge(101);
-		} catch(ValidationException e) {
-			System.out.println("Validation exception occured!");
-		}
-	}
-
-	@Test
-	public void testThrowValidationException() {
+		Person person = (Person) context.getBean("person");
+		person.setAge(101);
 	}
 }

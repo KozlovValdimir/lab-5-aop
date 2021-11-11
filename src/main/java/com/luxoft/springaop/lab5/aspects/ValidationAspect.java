@@ -8,7 +8,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
 
 @Aspect
-@Order(1)
+@Order(3)
 public class ValidationAspect {
 	@Pointcut("execution(* *.setAge(..))")
 	public void setAgeMethod() {
